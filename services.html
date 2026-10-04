@@ -93,7 +93,21 @@
   .realm.reality .offer .spec .price{color:var(--sky)}
   .offer .spec .face{width:100%;font-size:.82rem;color:var(--ink-soft)}
   .offer .btn{align-self:flex-start;margin-top:auto}
+  .offer .sub-link{align-self:flex-start;margin-top:16px;font-size:.88rem;letter-spacing:.06em;color:var(--sea);text-decoration:underline;text-underline-offset:5px}
   .offer .spacer{flex:1}
+  @media (min-width:881px){#learn .offers{grid-template-columns:repeat(3,1fr)}#learn .offers > .offer:last-child{grid-column:auto}}
+  .offer .cover{display:block;margin:-6px -6px 22px;border-radius:16px;overflow:hidden;box-shadow:0 14px 30px -20px rgba(27,42,85,.55)}
+  .offer .cover img{display:block;width:100%;height:auto;aspect-ratio:1.91/1;object-fit:cover;transition:transform .5s ease}
+  .offer .cover:hover img{transform:scale(1.03)}
+  .reads-title{font-weight:500;font-size:1.05rem;letter-spacing:.2em;color:var(--sea);margin:56px 0 20px;display:flex;align-items:center;gap:16px}
+  .reads-title::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,rgba(194,161,101,.5),transparent)}
+  .realm.reality .reads-title{color:var(--gold-soft)}
+  .offer.read{padding:32px 34px 28px}
+  .realm-tag{align-self:flex-start;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:.95rem;color:var(--gold);border:1px solid rgba(194,161,101,.5);border-radius:999px;padding:1px 14px;margin-bottom:12px}
+  .realm.reality .realm-tag{color:var(--gold-soft);border-color:rgba(228,210,168,.45)}
+  .offers:not(.single){align-items:stretch}
+  .offers:not(.single) > .offer:last-child:nth-child(odd){grid-column:1/-1}
+  .offer.read h3{font-size:1.15rem}
 
   .bottom-cta{padding:100px 0;text-align:center;position:relative;overflow:hidden;background:var(--deep-2);color:var(--sky)}
   .bottom-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,32,74,.8),rgba(20,32,74,.92)),url("images/hero.jpg") center 30%/cover}
@@ -123,10 +137,10 @@
       <button class="menu-btn" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">メニュー</button>
       <ul id="nav-list">
         <li><a href="index.html">トップ</a></li>
-        <li><a href="#body">Body</a></li>
-        <li><a href="#mind">Mind</a></li>
-        <li><a href="#spirit">Spirit</a></li>
-        <li><a href="#reality">ビジネス・講座</a></li>
+        <li><a href="#kantei">鑑定書</a></li>
+        <li><a href="#session">セッション</a></li>
+        <li><a href="#course">講座・コンサル</a></li>
+        <li><a href="#learn">学べるコンテンツ</a></li>
         <li><a href="profile.html">プロフィール</a></li>
         <li><a href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINE</a></li>
       </ul>
@@ -161,9 +175,9 @@
           <text class="real-latin" x="280" y="-32">la réalité</text>
           <text class="real" x="280" y="-10">現実　仕事・豊かさ・人間関係</text>
 
-          <a href="#spirit" aria-label="Spirit 魂"><circle class="c spirit" cx="280" cy="190" r="112"/></a>
-          <a href="#body" aria-label="Body 体"><circle class="c body" cx="212" cy="310" r="112"/></a>
-          <a href="#mind" aria-label="Mind 心"><circle class="c mind" cx="348" cy="310" r="112"/></a>
+          <circle class="c spirit" cx="280" cy="190" r="112"/>
+          <circle class="c body" cx="212" cy="310" r="112"/>
+          <circle class="c mind" cx="348" cy="310" r="112"/>
 
           <text class="lbl" x="280" y="135">Spirit</text>
           <text class="jp" x="280" y="160">魂</text>
@@ -180,14 +194,15 @@
     </div>
   </section>
 
-  <!-- BODY -->
-  <section id="body" class="realm body">
+  <!-- KANTEI -->
+  <section id="kantei" class="realm body">
     <div class="wrap">
-      <div class="realm-head"><span class="latin">Body</span><h2>体　生きる土台を整える</h2></div>
-      <p class="realm-intro">心と体は、生きることの土台。崩れやすいところと戻り方を知っていれば、波があっても大丈夫です。</p>
-      <div class="offers">
+      <div class="realm-head"><span class="latin">lecture</span><h2>鑑定書</h2></div>
+      <p class="realm-intro">自分のことは、自分がいちばん見えにくいもの。<br>あなたが本来持っている力と、つまずきやすいポイントを、数秘で言葉にしてお届けします。<br>迷ったとき、崩れたとき、いつでも立ち返れる"自分の地図"に。</p>
+      <div class="offers single">
         <article class="offer">
-          <span class="name">鑑定書　数秘ウェルネスカルテ</span>
+          <span class="realm-tag">Body</span>
+          <span class="name">数秘ウェルネスカルテ</span>
           <h3>ずれても、戻れる。<br>自分の心と体の"取扱説明書"。</h3>
           <p>人間だから、落ち込む日も、うまくいかない日もある。でも、自分が崩れやすいパターンと、不調が出やすいところを知っていれば、すぐに立て直せます。</p>
           <p>心のバランスを崩しやすいとき、体に影響が出やすい部位、そしてそのケアの仕方まで。数秘を心と体のケアに落とし込んだ、ほかにはない鑑定書です。ご希望の方には、あなたの数に合ったHealyのプログラムもお伝えします。</p>
@@ -195,35 +210,18 @@
           <div class="spec"><span>PDFでお届け</span><span>お申し込みから5日以内</span><span class="price">3,800<small>円</small></span></div>
           <a class="btn btn-deep" href="https://cosmiclune9.base.shop/items/149236296" target="_blank" rel="noopener">購入ページを見る</a>
         </article>
-        <article class="offer">
-          <span class="name">シン・ウェルネスLabo</span>
-          <h3>体から、心と魂まで。<br>物理と情報の両方から、いまのあなたを見る。</h3>
-          <p>毛細血管の観察で、目に見える物理空間から。周波数で、目に見えない情報空間から。ふたつの視点で、いまのあなたの状態を多角的に確かめていきます。</p>
-          <p>そのうえで、エネルギーのケアと、管理栄養士による食事や生活習慣のアドバイスを。体を入り口に、ボディ・マインド・スピリットのすべてを整えていくラボです。</p>
-          <div class="spacer"></div>
-          <div class="spec"><span>管理栄養士と共同主宰</span><span>開催は公式LINEでお知らせ</span></div>
-          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで開催情報を受け取る</a>
-        </article>
       </div>
     </div>
   </section>
 
-  <!-- MIND -->
-  <section id="mind" class="realm mind">
+  <!-- SESSIONS -->
+  <section id="session" class="realm mind">
     <div class="wrap">
-      <div class="realm-head"><span class="latin">Mind</span><h2>心　自分を知り、活かす</h2></div>
-      <p class="realm-intro">生まれ持った魂の設計図を、数秘から読み解きます。自分を理解すると、選び方も、生き方も変わっていきます。</p>
+      <div class="realm-head"><span class="latin">séance</span><h2>セッション</h2></div>
+      <p class="realm-intro">ひとりで考えても、答えが出ない。そんなときは、話しながらほどいていく方が早いこともあります。<br>いま抱えている悩みにその場で向き合い、絡まった想いを一緒にほどいて、次の一歩が見えるところまでご一緒します。</p>
       <div class="offers">
         <article class="offer">
-          <span class="name">鑑定書　フルパワー解放鑑定</span>
-          <h3>強みと、経験したいこと。<br>掛け合わせたとき、人生はもっと楽に、楽しくなる。</h3>
-          <p>頑張っているのに空回りする。自分の良さを活かしきれていない気がする。それは、持って生まれた強み（宿命数）と、この人生で経験したいこと（運命数）が、まだ噛み合っていないだけかもしれません。</p>
-          <p>数字ごとの意味だけでは分からない、ふたつの数のシナジーから、あなたが才能・資質・経験をすべて使い、自分を解放しながら生きる道を詳しく読み解きます。</p>
-          <p class="after">無理なく自分を活かせるようになると、豊かさも人間関係も、自然とうまく回りはじめます。</p>
-          <div class="spec"><span>PDFでお届け</span><span>お申し込みから5日以内</span><span class="price">3,800<small>円</small></span></div>
-          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
-        </article>
-        <article class="offer">
+          <span class="realm-tag">Mind</span>
           <span class="name">数秘鑑定セッション</span>
           <h3>いまの悩みに、<br>あなたの人生全体から答えを出す。</h3>
           <p>仕事、お金、人間関係、これからの選択。いま抱えている問題は、あなたの人生の流れの中で、ちゃんと意味のある場所にあります。</p>
@@ -233,17 +231,8 @@
           <div class="spec"><span>オンライン</span><span>60分</span><span class="price">15,000<small>円</small></span><span class="face">対面も可能です（神奈川県秦野市／都内。都内の場合は別途交通費をいただきます）</span></div>
           <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPIRIT -->
-  <section id="spirit" class="realm spirit">
-    <div class="wrap">
-      <div class="realm-head"><span class="latin">Spirit</span><h2>魂　本来の周波数に還る</h2></div>
-      <p class="realm-intro">言葉や意識では届かない、深い層へ。周波数を通して、あなたの本音を覆っているものを取り去っていきます。</p>
-      <div class="offers single">
         <article class="offer">
+          <span class="realm-tag">Spirit</span>
           <span class="name">情報空間リーディング（Healy周波数セッション）</span>
           <h3>あなたを縛るノイズを外せば、<br>人生はもっと自由にクリエイトできる。</h3>
           <p>変わりたいのに変われない。頭では分かっているのに、同じところで止まってしまう。それは、あなたの本音を覆っている「ノイズ」のせいかもしれません。これまでの思い込みや信念、親や社会からの刷り込み、魂のカルマ。</p>
@@ -254,26 +243,38 @@
           <div class="spec"><span>オンライン</span><span>60分</span><span class="price">19,800<small>円</small></span><span class="face">対面も可能です（神奈川県秦野市／都内。都内の場合は別途交通費をいただきます）</span></div>
           <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
         </article>
+        <article class="offer">
+          <span class="realm-tag">Body ・ Mind ・ Spirit</span>
+          <span class="name">シン・ウェルネスLabo</span>
+          <h3>体から、心と魂まで。<br>物理と情報の両方から、いまのあなたを見る。</h3>
+          <p>毛細血管の観察で、目に見える物理空間から。周波数で、目に見えない情報空間から。ふたつの視点で、いまのあなたの状態を多角的に確かめていきます。</p>
+          <p>そのうえで、エネルギーのケアと、管理栄養士による食事や生活習慣のアドバイスを。体を入り口に、ボディ・マインド・スピリットのすべてを整えていくラボです。</p>
+          <div class="spacer"></div>
+          <div class="spec"><span>管理栄養士と共同主宰</span><span>開催は公式LINEでお知らせ</span></div>
+          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで開催情報を受け取る</a>
+          <a class="sub-link" href="https://www.instagram.com/shin_wellness_labo/" target="_blank" rel="noopener">Instagramでラボの様子を見る →</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- REALITY -->
-  <section id="reality" class="realm reality">
+  <!-- COURSE -->
+  <section id="course" class="realm reality">
     <div class="wrap">
-      <div class="realm-head"><span class="latin">la réalité</span><h2>そして、現実へ</h2></div>
+      <div class="realm-head"><span class="latin">la réalité</span><h2>講座・コンサルティング</h2></div>
       <p class="realm-intro">整った自分のままで、価値を世界に届ける。仕事と豊かさという現実に、形にしていくための講座とコンサルティングです。</p>
       <div class="offers">
         <article class="offer">
-          <span class="name">講座　Alchemia ∞ Alignment</span>
+          <span class="realm-tag">la réalité</span>
+          <span class="name">Alchemia ∞ Alignment</span>
           <h3>自分と一致したとき、<br>あなたの価値は豊かさに変わる。</h3>
           <p>スキルも経験もあるのに、それがお金に変わらない。誰かのやり方を真似しても、どこかしっくりこない。</p>
           <p>この講座では、外側の正解ではなく、あなた自身と一致することから始めます。自分の才能と価値に気づき、それを世界に届けたとき、あなたという存在そのものが豊かさを生み出していく。</p>
           <p class="after">自分の価値で錬金する、新しい生き方と働き方を一緒に形にしていきます。</p>
-          <div class="spec"><span>募集時期・詳細は公式LINEでお知らせ</span></div>
-          <a class="btn btn-gold" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで案内を受け取る</a>
+          <a class="btn btn-gold" href="https://alchemia-alignment.vercel.app/" target="_blank" rel="noopener">講座の詳細を見る</a>
         </article>
         <article class="offer">
+          <span class="realm-tag">la réalité</span>
           <span class="name">AI活用コンサルティング</span>
           <h3>あなたの価値を、<br>AIで世界に届ける。</h3>
           <p>お教室、サロン、鑑定、コーチング。好きなこと、得意なことを仕事にしているのに、発信や集客、マネタイズの方法で立ち止まっていませんか。</p>
@@ -281,6 +282,48 @@
           <div class="spacer"></div>
           <div class="spec"><span>内容に合わせてお見積もり</span></div>
           <a class="btn btn-gold" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで相談する</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEARN -->
+  <section id="learn" class="realm spirit">
+    <div class="wrap">
+      <div class="realm-head"><span class="latin">apprendre</span><h2>学べるコンテンツ</h2></div>
+      <p class="realm-intro">自分のペースで、いつでも学べるテキストです。</p>
+      <div class="offers">
+        <article class="offer read">
+          <a class="cover" href="https://note.com/richesse_infinie/n/nd6f70fb187ba" target="_blank" rel="noopener"><img src="images/cover-healy.jpg" alt="note「Healyを、もっと活かす。」の表紙" loading="lazy" width="1000" height="525"></a>
+          <span class="realm-tag">Spirit</span>
+          <span class="name">note　Healyを、もっと活かす。</span>
+          <h3>「なんとなく使う」から、<br>「もっと自分らしく生きる」相棒へ。</h3>
+          <p>プログラム選びで迷う。Healyの背景や思想まで知りたい。そんなあなたのための、4つのレベルで学べるHealyの活用ガイドです。</p>
+          <p>周波数やマイクロカレントの基礎から、「今日の自分なら、どう選ぶ？」という判断軸、プログラムの使い分け、そして「Healyは何を見ているのか」という探究まで。易経解説、コーチング文章作成、プログラム選択ナビゲーションアプリのサポートツールつきです。</p>
+          <div class="spacer"></div>
+          <div class="spec"><span>note・買い切り</span><span class="price">11,800<small>円</small></span><span class="face">コンテンツの追加に合わせて、価格は随時改定しています。</span></div>
+          <a class="btn btn-deep" href="https://note.com/richesse_infinie/n/nd6f70fb187ba" target="_blank" rel="noopener">noteで読む</a>
+        </article>
+        <article class="offer read">
+          <a class="cover" href="https://note.com/richesse_infinie/n/n66095d2d46b0" target="_blank" rel="noopener"><img src="images/cover-shrine.jpg" alt="note「神社に隠された「日本の叡智」と望みが叶う「５つの参拝術」」の表紙" loading="lazy" width="1000" height="525"></a>
+          <span class="realm-tag">Spirit</span>
+          <span class="name">note　神社に隠された「日本の叡智」と 望みが叶う「５つの参拝術」</span>
+          <h3>お願いしたのに、叶わない。<br>それには理由があります。</h3>
+          <p>神社は、祓い清めることに特化したシステム空間。鳥居、砂利、手水舎、お賽銭、柏手。参拝に隠された5つのステップと、そこに込められた日本の叡智を読み解きます。</p>
+          <p>よくあるパワースポット巡りの話ではありません。言霊学や古神道に受け継がれてきた叡智を、いつもの参拝でそのまま実践できるよう、分かりやすくひもといています。</p>
+          <p class="after">願いを叶える鍵は、神様ではなく、あなた自身の中に。</p>
+          <div class="spec"><span>note</span><span class="price">5,800<small>円</small></span></div>
+          <a class="btn btn-deep" href="https://note.com/richesse_infinie/n/n66095d2d46b0" target="_blank" rel="noopener">noteで読む</a>
+        </article>
+        <article class="offer read">
+          <a class="cover" href="https://tips.jp/u/ruricosmic/a/LP6KCPfS/d/dac" target="_blank" rel="noopener"><img src="images/cover-tips.jpg" alt="Tips「売れないジャンル・フォロワー3桁でもKindle印税6桁の裏側」の表紙" loading="lazy" width="1000" height="525"></a>
+          <span class="realm-tag">la réalité</span>
+          <span class="name">Tips　「売れないジャンル・フォロワー3桁」でも"Kindle印税6桁"の裏側</span>
+          <h3>フォロワーが少なくても、<br>スピリチュアルでも、本は届く。</h3>
+          <p>Kindleを出したのに売れない。印税をビジネスの柱にしたい。スピリチュアルなテーマで届けたい。出版に興味はあるけれど、何から始めればいいか分からない。</p>
+          <p>数秘術の本5冊をすべてベストセラーにしてきた経験から、Amazonが広めてくれる本の作り方と、「設計・届け方・在り方」の整え方をお伝えします。</p>
+          <div class="spec"><span>Tips</span><span class="price">3,800<small>円</small></span></div>
+          <a class="btn btn-deep" href="https://tips.jp/u/ruricosmic/a/LP6KCPfS/d/dac" target="_blank" rel="noopener">Tipsで読む</a>
         </article>
       </div>
     </div>
