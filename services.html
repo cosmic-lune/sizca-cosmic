@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>セッション・コンテンツ｜sizca｜cosmic ∞ lune</title>
+<meta name="description" content="ボディ・マインド・スピリット、そして現実へ。sizcaのセッション・鑑定書・講座のご案内です。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="sizca｜cosmic ∞ lune">
+<meta property="og:title" content="セッション・コンテンツ｜sizca｜cosmic ∞ lune">
+<meta property="og:description" content="ボディ・マインド・スピリット、そして現実へ。数秘鑑定、情報空間リーディング、鑑定書、講座のご案内です。">
+<meta property="og:image" content="https://sizca-cosmic.vercel.app/images/ogp.jpg">
+<meta property="og:url" content="https://sizca-cosmic.vercel.app/services.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== services page ===== */
+  .page-hero{
+    position:relative;min-height:62vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;
+    background:var(--deep) url("images/hero.jpg") center 30%/cover no-repeat;color:var(--sky);overflow:hidden;
+  }
+  .page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,74,.55) 0%,rgba(20,32,74,.35) 45%,rgba(20,32,74,.85) 100%)}
+  .page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,rgba(238,242,250,0),#EEF2FA)}
+  .page-hero .inner{position:relative;z-index:1;padding:0 20px 150px}
+  .page-hero .latin{display:block;color:var(--gold-soft);font-size:1.15rem;margin-bottom:10px}
+  .page-hero h1{font-weight:500;font-size:clamp(1.7rem,3.6vw,2.5rem);letter-spacing:.14em;line-height:1.6}
+  .page-hero p{margin-top:16px;color:rgba(243,246,251,.88);letter-spacing:.12em;text-wrap:balance}
+
+  /* intro + diagram */
+  .bms{padding:40px 0 60px;text-align:center}
+  .bms .lead{max-width:32em;margin:0 auto 44px;color:var(--ink-soft);text-wrap:balance}
+  .bms-fig{position:relative;width:min(560px,100%);margin:0 auto}
+  .bms-fig svg{width:100%;height:auto;display:block;overflow:visible}
+  .bms-fig .ring{fill:none;stroke:var(--gold);stroke-width:1;stroke-dasharray:3 6;opacity:.8}
+  .bms-fig .glow{fill:url(#realityGlow)}
+  .bms-fig .c{stroke:rgba(255,255,255,.95);stroke-width:1.5}
+  .bms-fig .c.body{fill:rgba(165,190,232,.55)}
+  .bms-fig .c.mind{fill:rgba(196,186,232,.55)}
+  .bms-fig .c.spirit{fill:rgba(236,220,182,.6)}
+  .bms-fig a{cursor:pointer}
+  .bms-fig a:hover .c,.bms-fig a:focus .c{stroke:var(--gold);stroke-width:2.2}
+  .bms-fig .lbl{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:26px;fill:var(--deep);text-anchor:middle}
+  .bms-fig .jp{font-family:"Shippori Mincho",serif;font-size:16px;fill:var(--ink-soft);text-anchor:middle;letter-spacing:.1em}
+  .bms-fig .you{font-family:"Shippori Mincho",serif;font-size:15px;fill:var(--deep);text-anchor:middle;letter-spacing:.2em}
+  .bms-fig .real{font-family:"Shippori Mincho",serif;font-size:16px;fill:var(--gold);text-anchor:middle;letter-spacing:.14em}
+  .bms-fig .real-latin{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:19px;fill:var(--gold);text-anchor:middle}
+  .bms-note{margin-top:34px;color:var(--deep);letter-spacing:.1em;line-height:2.1;text-wrap:balance}
+
+  /* realm sections */
+  .realm{padding:80px 0 90px;position:relative}
+  .realm-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:12px}
+  .realm-head .latin{font-size:1.5rem;color:var(--gold)}
+  .realm-head h2{margin:0}
+  .realm-intro{max-width:34em;color:var(--ink-soft);margin-bottom:40px}
+  .realm.body{background:linear-gradient(180deg,#EEF2FA,#E3EAF7)}
+  .realm.mind{background:linear-gradient(180deg,#E3EAF7,#E9E5F5)}
+  .realm.spirit{background:linear-gradient(180deg,#E9E5F5,#F2ECDD 60%,#EEF2FA)}
+  .realm.reality{background:linear-gradient(180deg,var(--deep) 0%,var(--deep-2) 100%);color:var(--sky)}
+  .realm.reality .realm-intro{color:rgba(243,246,251,.78)}
+  .realm.reality h2{color:var(--sky)}
+  .realm.reality .latin{color:var(--gold-soft)}
+
+  .offers{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .offers.single{grid-template-columns:1fr;max-width:760px;margin:0 auto}
+  .offer{
+    display:flex;flex-direction:column;
+    background:rgba(255,255,255,.66);border:1px solid rgba(255,255,255,.95);border-radius:26px;
+    padding:40px 38px 34px;box-shadow:0 24px 50px -34px rgba(27,42,85,.55);
+  }
+  .realm.reality .offer{background:rgba(255,255,255,.06);border-color:rgba(243,246,251,.16);box-shadow:none}
+  .offer .name{font-size:.88rem;letter-spacing:.12em;color:var(--sea)}
+  .realm.reality .offer .name{color:var(--gold-soft)}
+  .offer h3{font-weight:500;font-size:1.32rem;line-height:1.75;letter-spacing:.06em;color:var(--deep);margin:10px 0 18px;text-wrap:balance;word-break:auto-phrase}
+  .realm.reality .offer h3{color:var(--sky)}
+  .offer p{color:var(--ink-soft);font-size:.95rem;margin-bottom:12px}
+  .realm.reality .offer p{color:rgba(243,246,251,.8)}
+  .offer p.after{color:var(--deep);font-size:.98rem;margin-top:4px}
+  .realm.reality .offer p.after{color:var(--sky)}
+  .offer .bonus{
+    display:flex;align-items:center;gap:10px;margin:14px 0 4px;padding:12px 16px;border-radius:14px;
+    background:linear-gradient(135deg,rgba(246,236,210,.75),rgba(228,210,168,.45));color:var(--deep);font-size:.9rem;
+  }
+  .offer .bonus::before{content:"✦";color:var(--gold)}
+  .offer .spec{display:flex;flex-wrap:wrap;gap:6px 22px;margin:22px 0 22px;padding-top:18px;border-top:1px solid rgba(194,161,101,.4);font-size:.9rem;color:var(--ink-soft)}
+  .realm.reality .offer .spec{color:rgba(243,246,251,.75);border-top-color:rgba(228,210,168,.35)}
+  .offer .spec .price{font-family:"Cormorant Garamond",serif;font-size:1.45rem;color:var(--deep);margin-left:auto}
+  .offer .spec .price small{font-family:"Shippori Mincho",serif;font-size:.78rem;margin-left:2px}
+  .realm.reality .offer .spec .price{color:var(--sky)}
+  .offer .spec .face{width:100%;font-size:.82rem;color:var(--ink-soft)}
+  .offer .btn{align-self:flex-start;margin-top:auto}
+  .offer .spacer{flex:1}
+
+  .bottom-cta{padding:100px 0;text-align:center;position:relative;overflow:hidden;background:var(--deep-2);color:var(--sky)}
+  .bottom-cta::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,32,74,.8),rgba(20,32,74,.92)),url("images/hero.jpg") center 30%/cover}
+  .bottom-cta .wrap{position:relative}
+  .bottom-cta p{color:rgba(243,246,251,.8);max-width:30em;margin:0 auto 34px}
+
+  @media (max-width:880px){
+    .page-hero{min-height:56vh;background-image:url("images/hero-sp.jpg");background-position:50% 20%}
+    .page-hero .inner{padding-bottom:120px}
+    .bms{padding:24px 0 64px}
+    .realm{padding:64px 0}
+    .offers{grid-template-columns:1fr;gap:18px}
+    .offer{padding:32px 24px 28px}
+    .offer h3{font-size:1.15rem;letter-spacing:.03em}
+    .offer .spec .price{margin-left:0;width:100%}
+    .offer .btn{align-self:stretch;text-align:center}
+    .bottom-cta{padding:72px 0}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">sizca</a>
+    <nav id="nav">
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">メニュー</button>
+      <ul id="nav-list">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#body">Body</a></li>
+        <li><a href="#mind">Mind</a></li>
+        <li><a href="#spirit">Spirit</a></li>
+        <li><a href="#reality">ビジネス・講座</a></li>
+        <li><a href="profile.html">プロフィール</a></li>
+        <li><a href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINE</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="inner">
+      <span class="latin">sessions &amp; contents</span>
+      <h1>セッション・コンテンツ</h1>
+      <p>ボディ・マインド・スピリット、<br>そして現実へ。</p>
+    </div>
+  </div>
+
+  <!-- BODY MIND SPIRIT -->
+  <section class="bms">
+    <div class="wrap">
+      <p class="lead">人は、体と心と魂でできています。どれかひとつだけを整えても、人生はなかなか動きません。<br>入り口はどこからでも大丈夫。いまのあなたに必要なところから、はじめてください。</p>
+      <div class="bms-fig">
+        <svg viewBox="0 -54 560 574" role="img" aria-label="ボディ・マインド・スピリットが重なる中心にあなたがいて、その外側に現実が広がる図">
+          <defs>
+            <radialGradient id="realityGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="55%" stop-color="#FFF8E8" stop-opacity="0"/>
+              <stop offset="80%" stop-color="#F3E3BC" stop-opacity=".45"/>
+              <stop offset="100%" stop-color="#F3E3BC" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle class="glow" cx="280" cy="265" r="255"/>
+          <circle class="ring" cx="280" cy="265" r="236"/>
+          <text class="real-latin" x="280" y="-32">la réalité</text>
+          <text class="real" x="280" y="-10">現実　仕事・豊かさ・人間関係</text>
+
+          <a href="#spirit" aria-label="Spirit 魂"><circle class="c spirit" cx="280" cy="190" r="112"/></a>
+          <a href="#body" aria-label="Body 体"><circle class="c body" cx="212" cy="310" r="112"/></a>
+          <a href="#mind" aria-label="Mind 心"><circle class="c mind" cx="348" cy="310" r="112"/></a>
+
+          <text class="lbl" x="280" y="135">Spirit</text>
+          <text class="jp" x="280" y="160">魂</text>
+          <text class="lbl" x="170" y="355">Body</text>
+          <text class="jp" x="170" y="380">体</text>
+          <text class="lbl" x="390" y="355">Mind</text>
+          <text class="jp" x="390" y="380">心</text>
+
+          <circle cx="280" cy="268" r="30" fill="#FFFBF1" stroke="#C2A165" stroke-width="1"/>
+          <text class="you" x="281" y="273">あなた</text>
+        </svg>
+      </div>
+      <p class="bms-note">体と心と魂がそろったとき、あなたは本来の周波数で生きはじめる。<br>そして、その在り方が、仕事や豊かさという現実を動かしていきます。</p>
+    </div>
+  </section>
+
+  <!-- BODY -->
+  <section id="body" class="realm body">
+    <div class="wrap">
+      <div class="realm-head"><span class="latin">Body</span><h2>体　生きる土台を整える</h2></div>
+      <p class="realm-intro">心と体は、生きることの土台。崩れやすいところと戻り方を知っていれば、波があっても大丈夫です。</p>
+      <div class="offers">
+        <article class="offer">
+          <span class="name">鑑定書　数秘ウェルネスカルテ</span>
+          <h3>ずれても、戻れる。<br>自分の心と体の"取扱説明書"。</h3>
+          <p>人間だから、落ち込む日も、うまくいかない日もある。でも、自分が崩れやすいパターンと、不調が出やすいところを知っていれば、すぐに立て直せます。</p>
+          <p>心のバランスを崩しやすいとき、体に影響が出やすい部位、そしてそのケアの仕方まで。数秘を心と体のケアに落とし込んだ、ほかにはない鑑定書です。ご希望の方には、あなたの数に合ったHealyのプログラムもお伝えします。</p>
+          <p class="after">戻り方を知っている人は、ずっと生きやすくなります。</p>
+          <div class="spec"><span>PDFでお届け</span><span>お申し込みから5日以内</span><span class="price">3,800<small>円</small></span></div>
+          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
+        </article>
+        <article class="offer">
+          <span class="name">シン・ウェルネスLabo</span>
+          <h3>体から、心と魂まで。<br>物理と情報の両方から、いまのあなたを見る。</h3>
+          <p>毛細血管の観察で、目に見える物理空間から。周波数で、目に見えない情報空間から。ふたつの視点で、いまのあなたの状態を多角的に確かめていきます。</p>
+          <p>そのうえで、エネルギーのケアと、管理栄養士による食事や生活習慣のアドバイスを。体を入り口に、ボディ・マインド・スピリットのすべてを整えていくラボです。</p>
+          <div class="spacer"></div>
+          <div class="spec"><span>管理栄養士と共同主宰</span><span>開催は公式LINEでお知らせ</span></div>
+          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで開催情報を受け取る</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- MIND -->
+  <section id="mind" class="realm mind">
+    <div class="wrap">
+      <div class="realm-head"><span class="latin">Mind</span><h2>心　自分を知り、活かす</h2></div>
+      <p class="realm-intro">生まれ持った魂の設計図を、数秘から読み解きます。自分を理解すると、選び方も、生き方も変わっていきます。</p>
+      <div class="offers">
+        <article class="offer">
+          <span class="name">鑑定書　フルパワー解放鑑定</span>
+          <h3>強みと、経験したいこと。<br>掛け合わせたとき、人生はもっと楽に、楽しくなる。</h3>
+          <p>頑張っているのに空回りする。自分の良さを活かしきれていない気がする。それは、持って生まれた強み（宿命数）と、この人生で経験したいこと（運命数）が、まだ噛み合っていないだけかもしれません。</p>
+          <p>数字ごとの意味だけでは分からない、ふたつの数のシナジーから、あなたが才能・資質・経験をすべて使い、自分を解放しながら生きる道を詳しく読み解きます。</p>
+          <p class="after">無理なく自分を活かせるようになると、豊かさも人間関係も、自然とうまく回りはじめます。</p>
+          <div class="spec"><span>PDFでお届け</span><span>お申し込みから5日以内</span><span class="price">3,800<small>円</small></span></div>
+          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
+        </article>
+        <article class="offer">
+          <span class="name">数秘鑑定セッション</span>
+          <h3>いまの悩みに、<br>あなたの人生全体から答えを出す。</h3>
+          <p>仕事、お金、人間関係、これからの選択。いま抱えている問題は、あなたの人生の流れの中で、ちゃんと意味のある場所にあります。</p>
+          <p>宿命数・運命数・使命数の3つの数と、いまの時期を示す周期数まで使い、あなたの人生全体を読み解きながら、目の前の課題にどう向き合えばいいかを一緒に考えます。オンラインで対話しながら進めるので、その日のあなたの状態に合わせてアドバイスできます。</p>
+          <p class="after">「なぜ今これが起きているのか」が分かると、次の一歩は驚くほど軽くなります。</p>
+          <div class="bonus">セッション後に、その日の内容をまとめた解説書をお渡しします</div>
+          <div class="spec"><span>オンライン</span><span>60分</span><span class="price">15,000<small>円</small></span><span class="face">対面も可能です（神奈川県秦野市／都内。都内の場合は別途交通費をいただきます）</span></div>
+          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPIRIT -->
+  <section id="spirit" class="realm spirit">
+    <div class="wrap">
+      <div class="realm-head"><span class="latin">Spirit</span><h2>魂　本来の周波数に還る</h2></div>
+      <p class="realm-intro">言葉や意識では届かない、深い層へ。周波数を通して、あなたの本音を覆っているものを取り去っていきます。</p>
+      <div class="offers single">
+        <article class="offer">
+          <span class="name">情報空間リーディング（Healy周波数セッション）</span>
+          <h3>あなたを縛るノイズを外せば、<br>人生はもっと自由にクリエイトできる。</h3>
+          <p>変わりたいのに変われない。頭では分かっているのに、同じところで止まってしまう。それは、あなたの本音を覆っている「ノイズ」のせいかもしれません。これまでの思い込みや信念、親や社会からの刷り込み、魂のカルマ。</p>
+          <p>Healyのコーチング機能で情報空間の深い層を読み取り、その結果をもとに、あなたと対話を重ねていきます。私自身もエネルギーを感じ取りながら掘り下げていくので、言葉だけでは届かない、魂の深いところまでたどり着くことができます。そして、見えてきたノイズを波動で取り去っていきます。</p>
+          <p>表面的な悩みの解決ではなく、魂の本質から生きたい。そう願うあなたのためのセッションです。</p>
+          <p class="after">本来の周波数に還ったとき、あなたは自由に、豊かに、人生を創り出せるようになります。</p>
+          <div class="bonus">セッション後に、その日の内容をまとめた解説書をお渡しします</div>
+          <div class="spec"><span>オンライン</span><span>60分</span><span class="price">19,800<small>円</small></span><span class="face">対面も可能です（神奈川県秦野市／都内。都内の場合は別途交通費をいただきます）</span></div>
+          <a class="btn btn-deep" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEから申し込む</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALITY -->
+  <section id="reality" class="realm reality">
+    <div class="wrap">
+      <div class="realm-head"><span class="latin">la réalité</span><h2>そして、現実へ</h2></div>
+      <p class="realm-intro">整った自分のままで、価値を世界に届ける。仕事と豊かさという現実に、形にしていくための講座とコンサルティングです。</p>
+      <div class="offers">
+        <article class="offer">
+          <span class="name">講座　Alchemia ∞ Alignment</span>
+          <h3>自分と一致したとき、<br>あなたの価値は豊かさに変わる。</h3>
+          <p>スキルも経験もあるのに、それがお金に変わらない。誰かのやり方を真似しても、どこかしっくりこない。</p>
+          <p>この講座では、外側の正解ではなく、あなた自身と一致することから始めます。自分の才能と価値に気づき、それを世界に届けたとき、あなたという存在そのものが豊かさを生み出していく。</p>
+          <p class="after">自分の価値で錬金する、新しい生き方と働き方を一緒に形にしていきます。</p>
+          <div class="spec"><span>募集時期・詳細は公式LINEでお知らせ</span></div>
+          <a class="btn btn-gold" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで案内を受け取る</a>
+        </article>
+        <article class="offer">
+          <span class="name">AI活用コンサルティング</span>
+          <h3>あなたの価値を、<br>AIで世界に届ける。</h3>
+          <p>お教室、サロン、鑑定、コーチング。好きなこと、得意なことを仕事にしているのに、発信や集客、マネタイズの方法で立ち止まっていませんか。</p>
+          <p>AIは、あなたの代わりに考えてくれる道具ではなく、あなたの価値を広く、速く届けるための相棒です。どんな価値を、誰に、どう届けて、どう収益にしていくのか。一人ひとりのお仕事に合わせて、AIの活かし方を一緒に設計します。</p>
+          <div class="spacer"></div>
+          <div class="spec"><span>内容に合わせてお見積もり</span></div>
+          <a class="btn btn-gold" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで相談する</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-cta">
+    <div class="wrap">
+      <h2>どれを選べばいいか迷ったら</h2>
+      <p>いまのお悩みや、なりたい未来を聞かせてください。あなたに合う入り口を、一緒に考えます。</p>
+      <a class="btn btn-gold" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで相談する</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 sizca ／ cosmic ∞ lune</span>
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="profile.html">プロフィール</a></li>
+      <li><a href="law.html">特定商取引法に基づく表記</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav(btn){
+    const nav=document.getElementById('nav');
+    const open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#nav-list a').forEach(a=>a.addEventListener('click',()=>{
+    const nav=document.getElementById('nav');
+    nav.classList.remove('open');
+    nav.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>

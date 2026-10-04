@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プロフィール｜sizca｜cosmic ∞ lune</title>
+<meta name="description" content="会社員時代の挫折から数秘術に出会い、精神世界とテクノロジーで「自分を生きる」を実践するまで。sizcaのストーリーです。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="sizca｜cosmic ∞ lune">
+<meta property="og:title" content="プロフィール｜sizca｜cosmic ∞ lune">
+<meta property="og:description" content="物質世界と精神世界、両方を本気で生きてきたから伝えられること。sizcaのストーリーです。">
+<meta property="og:image" content="https://sizca-cosmic.vercel.app/images/ogp.jpg">
+<meta property="og:url" content="https://sizca-cosmic.vercel.app/profile.html">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== profile page ===== */
+  .page-hero{
+    position:relative;min-height:62vh;display:flex;align-items:flex-end;justify-content:center;text-align:center;
+    background:var(--deep) url("images/origin.jpg") 70% 30%/cover no-repeat;color:var(--sky);overflow:hidden;
+  }
+  .page-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,32,74,.5) 0%,rgba(20,32,74,.3) 45%,rgba(20,32,74,.85) 100%)}
+  .page-hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(180deg,rgba(238,242,250,0),#EEF2FA)}
+  .page-hero .inner{position:relative;z-index:1;padding:0 20px 150px}
+  .page-hero .latin{display:block;color:var(--gold-soft);font-size:1.15rem;margin-bottom:10px}
+  .page-hero h1{font-family:"Cormorant Garamond",serif;font-weight:400;font-size:clamp(3rem,7vw,4.6rem);letter-spacing:.14em;line-height:1;padding-left:.14em}
+  .page-hero p{margin-top:16px;color:rgba(243,246,251,.88);letter-spacing:.14em}
+
+  .intro{padding:30px 0 80px}
+  .intro .wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:center;max-width:980px}
+  .intro .lead{font-size:clamp(1.25rem,2.4vw,1.6rem);line-height:1.9;letter-spacing:.08em;color:var(--deep);margin-bottom:22px;text-wrap:balance;word-break:auto-phrase}
+  .intro p{color:var(--ink-soft);margin-bottom:14px}
+  .nums{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .nums span{padding:6px 16px;border-radius:999px;background:rgba(255,255,255,.7);border:1px solid rgba(194,161,101,.45);font-size:.85rem;color:var(--deep)}
+  .nums b{font-family:"Cormorant Garamond",serif;font-size:1.2rem;font-weight:500;margin-left:4px;color:var(--gold)}
+
+  /* story */
+  .story{padding:40px 0 100px;position:relative}
+  .story .wrap{max-width:860px}
+  .chapters{list-style:none;position:relative;padding-left:64px}
+  .chapters::before{content:"";position:absolute;left:18px;top:10px;bottom:10px;width:1px;background:linear-gradient(180deg,var(--gold-soft),rgba(194,161,101,.25) 40%,var(--gold-soft))}
+  .chapter{position:relative;padding:0 0 76px}
+  .chapter:last-child{padding-bottom:0}
+  .chapter::before{
+    content:"";position:absolute;left:-52px;top:10px;width:13px;height:13px;border-radius:50%;
+    background:var(--sky);border:1px solid var(--gold);box-shadow:0 0 0 5px rgba(228,210,168,.25);
+  }
+  .chapter .no{font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--gold);font-size:1.1rem;letter-spacing:.06em}
+  .chapter h2{font-size:clamp(1.3rem,2.4vw,1.65rem);margin:6px 0 22px;color:var(--deep);text-wrap:balance;word-break:auto-phrase}
+  .chapter p{max-width:34em;margin-bottom:1.2em}
+  .chapter blockquote{
+    margin:28px 0;padding:22px 28px;border-radius:18px;max-width:32em;
+    background:rgba(255,255,255,.62);border-left:2px solid var(--gold);
+    font-size:1.06rem;line-height:2;color:var(--deep);letter-spacing:.05em;
+  }
+  .chapter.dark{
+    color:var(--sky);margin:0 -40px 76px -104px;padding:64px 40px 64px 104px;border-radius:28px;
+    background:linear-gradient(160deg,var(--deep-2),var(--deep) 70%,#2E4380);
+  }
+  .chapter.dark::before{left:52px;top:74px;background:var(--deep-2);border-color:var(--gold-soft)}
+  .chapter.dark h2{color:var(--sky)}
+  .chapter.dark p{color:rgba(243,246,251,.86)}
+  .chapter.dark .no{color:var(--gold-soft)}
+
+  /* message */
+  .message{position:relative;overflow:hidden;padding:120px 0;color:var(--sky);background:var(--deep-2)}
+  .message::before{content:"";position:absolute;inset:0;background:linear-gradient(rgba(20,32,74,.72),rgba(20,32,74,.9)),url("images/hero.jpg") center 35%/cover}
+  .message .wrap{position:relative;max-width:820px}
+  .message .latin{display:block;color:var(--gold-soft);font-size:1.15rem;margin-bottom:8px;text-align:center}
+  .message h2{color:var(--sky);text-align:center;margin-bottom:44px}
+  .message p{max-width:34em;margin:0 auto 1.4em;color:rgba(243,246,251,.88)}
+  .message p.strong{font-size:1.15rem;line-height:2.1;color:var(--sky);text-align:center;letter-spacing:.08em;margin-top:44px;text-wrap:balance}
+  .message .sign{text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:1.6rem;color:var(--gold-soft);margin-top:30px}
+
+  /* career */
+  .career{padding:100px 0}
+  .career .wrap{max-width:860px}
+  .career-list{list-style:none;border-left:1px solid var(--lavender);padding-left:28px;margin-top:10px}
+  .career-list li{position:relative;padding:14px 0;color:var(--ink-soft)}
+  .career-list li::before{content:"";position:absolute;left:-33px;top:24px;width:9px;height:9px;border-radius:50%;background:var(--sky);border:1px solid var(--gold)}
+  .career-list b{display:block;color:var(--deep);font-weight:500;letter-spacing:.06em}
+  .career-list .when{font-family:"Cormorant Garamond",serif;font-size:1.05rem;color:var(--gold);margin-right:10px}
+
+  .next{padding:0 0 110px;text-align:center}
+  .next p{color:var(--ink-soft);margin-bottom:28px}
+  .next .cta-row .btn-line{color:var(--deep);border-color:rgba(27,42,85,.35)}
+
+  @media (max-width:880px){
+    .page-hero{min-height:56vh;background-image:url("images/origin-sp.jpg");background-position:50% 40%}
+    .page-hero .inner{padding-bottom:120px}
+    .intro{padding:20px 0 56px}
+    .intro .wrap{grid-template-columns:1fr;gap:36px}
+    .intro .portrait-wrap{max-width:220px;margin:0 auto}
+    .story{padding:24px 0 72px}
+    .chapters{padding-left:34px}
+    .chapters::before{left:6px}
+    .chapter::before{left:-34px}
+    .chapter{padding-bottom:56px}
+    .chapter.dark{margin:0 -16px 56px -50px;padding:44px 20px 44px 50px;border-radius:20px}
+    .chapter.dark::before{left:16px;top:52px}
+    .chapter blockquote{padding:18px 20px;font-size:1rem}
+    .message{padding:80px 0}
+    .career{padding:72px 0}
+    .next .cta-row{flex-direction:column;align-items:center}
+    .next .btn{width:min(300px,100%)}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="index.html">sizca</a>
+    <nav id="nav">
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav-list" onclick="toggleNav(this)">メニュー</button>
+      <ul id="nav-list">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="#story">ストーリー</a></li>
+        <li><a href="#message">あなたへ</a></li>
+        <li><a href="#career">経歴</a></li>
+        <li><a href="services.html">セッション・コンテンツ</a></li>
+        <li><a href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINE</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="page-hero">
+    <div class="inner">
+      <span class="latin">profile</span>
+      <h1>sizca</h1>
+      <p>Cosmic Visionナビゲーター</p>
+    </div>
+  </div>
+
+  <section class="intro">
+    <div class="wrap">
+      <div class="portrait-wrap"><div class="portrait"><img src="images/portrait.jpg" alt="sizca"></div></div>
+      <div>
+        <p class="lead">精神世界とテクノロジーで、<br>「自分を生きる」を実践する。</p>
+        <p>数秘術、周波数、そしてAI。見えない世界の叡智と、いまの時代のテクノロジーを両輪にして、ひとりひとりが本来の自分を生きるためのナビゲートをしています。</p>
+        <p>スピリチュアルに1ミリも興味がなかった会社員時代。挫折をきっかけに、見えない世界を探求し尽くした年月。物質世界と精神世界、その両方を本気で生きてきたからこそ、伝えられることがあります。</p>
+        <div class="nums" aria-label="sizcaの数秘">
+          <span>宿命数<b>1</b></span><span>運命数<b>7</b></span><span>使命数<b>11</b></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section id="story" class="story">
+    <div class="wrap">
+      <ol class="chapters">
+        <li class="chapter">
+          <span class="no">chapitre I</span>
+          <h2>外側の成功だけを、追いかけていた</h2>
+          <p>いい大学に入って、いい会社に入って、そこで昇進していく。私は長いあいだ、それが人生の成功だと信じていました。スピリチュアルなんて、1ミリも興味がありませんでした。</p>
+          <p>最初の仕事は営業。自分から道を切り開き、どんどん前へ進んでいく。いま思えば、宿命数1そのものの働き方です。運命数7の年齢域に入って営業に苦しさを覚えるようになると、転職して人事の道へ。社員教育、採用、組織の活性化。大変だったけれど本当に楽しくて、「これが天職だ」と思えるほどでした。</p>
+          <p>物質的な、外側の世界での成功。それを私は、ある程度まで実現してきました。</p>
+          <blockquote>あとから数秘を知って驚いたのは、この転職さえも、数字の流れの通りだったことです。</blockquote>
+        </li>
+
+        <li class="chapter dark">
+          <span class="no">chapitre II</span>
+          <h2>「私の人生は、終わった」と思った日</h2>
+          <p>人生の目標は、最短最速で昇格していくこと。その成功ルートの上を走り続けることが、私のすべてでした。</p>
+          <p>ところが、人事異動をきっかけに仕事の内容ががらりと変わり、さまざまなことが重なって、少しずつ自信を失っていきました。お客さまには恵まれていたのに、「私はなんてダメなんだ」と自分を責め続ける毎日。数秘の1と7のネガティブな面が、強烈に出ていたのだと思います。</p>
+          <p>そして、適応障害と診断されました。出世のルートから外れた。もう自分の人生は終わった。100％、自分を否定していました。それと同時に、追い込まれすぎていた私は、「やっと休める」と、どこかでほっとしてもいたのです。</p>
+          <p>ここから、私の人生は180度変わっていきます。</p>
+        </li>
+
+        <li class="chapter">
+          <span class="no">chapitre III</span>
+          <h2>数字が、私の過去を全肯定してくれた</h2>
+          <p>立ち止まって、はじめて「自分って何なんだろう」と、自分の内側に目を向けました。そこで出会ったのが、数秘術です。</p>
+          <p>数字から読み解ける特徴が、自分の人生とすべて重なっていました。</p>
+          <blockquote>「私は、こういうふうに生きてきたんだ」<br>ダメだと思っていた過去を、まるごと肯定できた瞬間。</blockquote>
+          <p>数字という客観的なデータで自分を知ることは、自己受容と自己信頼への最初の一歩になりました。そして特徴を活かすほど、私はどんどん楽になり、楽しくなり、生きやすくなっていきました。すぐに数秘のカウンセラー資格を取り、ここから、見えない世界への探求が始まります。</p>
+        </li>
+
+        <li class="chapter">
+          <span class="no">chapitre IV</span>
+          <h2>見えない世界を、とことん探求した</h2>
+          <p>外側の成功を追いかけていたのと同じ熱量で、今度は内側の世界、見えない世界を探求していきました。</p>
+          <p>白川伯家神道の流れをくむ言霊学、神聖幾何学。サイキックの練習を重ね、ヒーラーの資格も取りました。世界中の聖地を巡り、日本の神社は全国2,000社以上を参拝しています。</p>
+          <p>アロマとシンギングボウルも学び、セッションとして提供してきました。香りと音は、五感を磨くものであり、同時に周波数そのもの。私は長いあいだ、香りや音を通して、周波数を整えることを続けてきたのです。</p>
+          <blockquote>知識として学ぶだけでなく、自分の体と感覚で確かめてきたこと。<br>それが、いまのセッションの土台になっています。</blockquote>
+        </li>
+
+        <li class="chapter">
+          <span class="no">chapitre V</span>
+          <h2>探求の先で出会った、Healy</h2>
+          <p>言霊学の世界では、古代から宮中の祭祀に関わってきた流れをくむ人たちが、いまテクノロジーを使って、言霊の力や古神道の教えを広めています。見えない世界の叡智とテクノロジーは、対立するものではない。私はそれを、探求の中で見てきました。</p>
+          <p>そして、大好きな本『アミ 小さな宇宙人』。そこに描かれている波動のテクノロジーが、いま現実にある。周波数デバイスHealyを知ったとき、「地球はここまで来たのか！」と、すとんと腑に落ちたのです。</p>
+          <blockquote>香りや音で整えてきた周波数を、テクノロジーで、もっと深く、早く、簡単に。<br>これは私たちの進化として持つべきものだと感じました。</blockquote>
+        </li>
+
+        <li class="chapter">
+          <span class="no">chapitre VI</span>
+          <h2>テクノロジーが、5冊の本を連れてきた</h2>
+          <p>もともと、インターネットをはじめとした新しいテクノロジーが大好き。AIも、ごく自然に使いはじめました。</p>
+          <p>手にしたAIの教材の中に、Kindle出版がありました。本が出せるなら、書いてみよう。そうして書いた数秘術の本は、5冊すべてベストセラーになりました。</p>
+        </li>
+
+        <li class="chapter dark">
+          <span class="no">chapitre VII</span>
+          <h2>物質世界と精神世界、両方を生きてきたから</h2>
+          <p>外側の成功を本気で追いかけた時間と、見えない世界を本気で探求した時間。私は、そのどちらも生きてきました。</p>
+          <p>だからこそ、魂の深いところに触れることも、それを仕事や豊かさという現実に形にしていくことも、どちらか一方に偏らずにお手伝いできます。</p>
+          <p>Healyと対話で、魂の本質まで掘り下げる情報空間リーディング。自分と一致し、自分の価値で錬金するAlchemia ∞ Alignment。心と体とエネルギーを多角的に見るシン・ウェルネスLabo。どれも、ふたつの世界を行き来してきた私だからこそ、できていることです。</p>
+          <blockquote style="background:rgba(255,255,255,.08);color:var(--sky)">見えない世界だけでも、現実だけでもない。<br>その両輪で、あなたが「自分を生きる」ことを、ナビゲートします。</blockquote>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- MESSAGE -->
+  <section id="message" class="message">
+    <div class="wrap">
+      <span class="latin">à vous</span>
+      <h2>これからの時代を生きる、あなたへ</h2>
+      <p>AIというテクノロジーは、これからますます進化していきます。これまで人にしかできないと言われてきたことも、どんどん機械が担うようになるでしょう。</p>
+      <p>それを「仕事が奪われる」と感じる人もいるかもしれません。でも、見方を変えれば、私たち一人ひとりが、自分にしかできないことだけをやっていい時代がやってきた、ということです。そしてそれは、もう始まっています。</p>
+      <p>だからこそ、自分を知ること。自分の特徴、才能、価値を知ること。それをテクノロジーと掛け合わせて世の中に届け、仕事にしていくことで、豊かさと自由が循環していきます。</p>
+      <p class="strong">精神世界とテクノロジーを両輪にして、うまく回しながら生きていく。<br>それが、これからの時代に「自分を生きる」ための、最高のヒントです。</p>
+      <p class="sign">sizca</p>
+    </div>
+  </section>
+
+  <!-- CAREER -->
+  <section id="career" class="career">
+    <div class="wrap">
+      <h2>経歴</h2>
+      <ul class="career-list">
+        <li><b>大手OA機器メーカーにて営業職</b>自ら開拓していく営業として勤務</li>
+        <li><b>大手精密機器メーカーにて人事職</b>社員教育、採用、組織活性化の企画を担当</li>
+        <li><span class="when">2017</span><b>会社員を卒業</b></li>
+        <li><span class="when">2018</span><b>開業</b></li>
+        <li><b>数秘カウンセラー資格取得</b></li>
+        <li><b>見えない世界の探求</b>言霊学、神聖幾何学、サイキック、ヒーラー資格取得。世界の聖地を巡り、全国2,000社以上の神社を参拝</li>
+        <li><b>アロマ・シンギングボウル</b>香りと音の周波数で整えるセッションを提供</li>
+        <li><b>Kindle著書5冊</b>数秘術の本を出版、すべてベストセラー</li>
+        <li><b>Healy World member</b>周波数デバイスの活用をサポート。Healyと対話から魂の深いところまで読み解く「情報空間リーディング」を提供</li>
+        <li><b>シン・ウェルネスLabo</b>周波数と毛細血管の視点から、ボディ・マインド・スピリットを整えるラボ。管理栄養士と共同主宰</li>
+        <li><b>Alchemia ∞ Alignment</b>自分と一致し、自分の価値で錬金する講座を主宰</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="next">
+    <div class="wrap">
+      <p>あなたの「自分を生きる」を、ここから一緒に。</p>
+      <div class="cta-row">
+        <a class="btn btn-deep" href="services.html">セッション・コンテンツを見る</a>
+        <a class="btn btn-line" href="https://lin.ee/60XRj8W" target="_blank" rel="noopener">公式LINEで相談する</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 sizca ／ cosmic ∞ lune</span>
+    <ul>
+      <li><a href="index.html">トップ</a></li>
+      <li><a href="services.html">セッション・コンテンツ</a></li>
+      <li><a href="law.html">特定商取引法に基づく表記</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  function toggleNav(btn){
+    const nav=document.getElementById('nav');
+    const open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+  }
+  document.querySelectorAll('#nav-list a').forEach(a=>a.addEventListener('click',()=>{
+    const nav=document.getElementById('nav');
+    nav.classList.remove('open');
+    nav.querySelector('.menu-btn').setAttribute('aria-expanded','false');
+  }));
+</script>
+</body>
+</html>
