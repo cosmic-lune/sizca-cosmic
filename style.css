@@ -572,3 +572,13 @@
   .insta svg circle:last-child{fill:var(--gold);stroke:none}
   .insta b{font-weight:500;font-family:"Cormorant Garamond",serif;font-size:1.05rem}
   @media (max-width:480px){.insta{font-size:.8rem;padding:12px 18px;text-align:left}}
+
+/* 活動領域からサービス一覧へ */
+.area-link{display:inline-block;margin-top:16px;font-size:.85rem;color:var(--sea);text-decoration:none;border-bottom:1px solid rgba(78,111,168,.4);padding-bottom:2px;align-self:flex-start}
+.area-link:hover{color:var(--deep);border-bottom-color:var(--gold)}
+#concept .more{margin-top:36px}
+
+/* 屋号ラベルと世界観の見出し */
+.origin-label{display:block;font-family:"Cormorant Garamond",serif;font-size:1.25rem;letter-spacing:.18em;color:var(--gold-soft);margin-bottom:14px}
+.origin-label .inf{margin:0 .25em}
+.origin h2.origin-title{font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.9;letter-spacing:.08em;margin-bottom:28px;text-wrap:balance;word-break:auto-phrase}
