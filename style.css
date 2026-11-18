@@ -288,3 +288,54 @@ footer a{text-decoration:none;color:rgba(255,255,255,.85)}
 }
 .h3-band{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px}
 .h3-band > div{flex:1 1 420px}
+.cards-4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:960px){.cards-4{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.cards-4{grid-template-columns:1fr 1fr;gap:12px}.cards-4 .card{padding:22px 18px}}
+.figure{max-width:960px;margin:0 auto 40px;border-radius:18px;overflow:hidden;box-shadow:0 24px 50px -34px rgba(27,42,85,.55)}
+.figure img{width:100%;height:auto}
+@media (max-width:520px){.figure{border-radius:12px;margin-bottom:28px}}
+.page-hero .split{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+.page-hero .device{border-radius:24px;overflow:hidden;aspect-ratio:1/1;box-shadow:0 30px 60px -36px rgba(27,42,85,.55)}
+.page-hero .device img{width:100%;height:100%;object-fit:cover}
+.h3-section{position:relative;background:#14204A url(images/healy-band.jpg) right center/cover no-repeat}
+.h3-section::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,32,74,.95) 0%,rgba(20,32,74,.85) 50%,rgba(20,32,74,.45) 100%)}
+.h3-section .wrap{position:relative}
+@media (max-width:880px){.page-hero .split{grid-template-columns:1fr;gap:28px}.page-hero .device{order:-1;max-width:360px;aspect-ratio:4/3}}
+
+/* visual layer */
+.ico{display:inline-flex;align-items:center;justify-content:center;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#fbf6ea,#eef2fa);color:var(--gold);margin-bottom:14px;border:1px solid var(--gold-soft)}
+.ico svg{width:26px;height:26px}
+.bg-deep .ico{background:rgba(255,255,255,.08);border-color:rgba(233,219,185,.45);color:var(--gold-soft)}
+.step{position:relative}
+.step .ico-step{position:absolute;right:22px;top:22px;margin:0;width:46px;height:46px}
+.card.has-img{padding-top:0;overflow:hidden}
+.card-img{margin:0 -28px 22px;aspect-ratio:16/9;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card.has-img:hover .card-img img{transform:scale(1.04)}
+.offer-banner{position:relative;margin:-40px -40px 30px;height:200px;overflow:hidden;border-radius:22px 22px 0 0}
+.offer-banner img{width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.offer-banner::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,32,74,.75),rgba(20,32,74,.1))}
+.offer-banner span{position:absolute;left:40px;bottom:26px;z-index:1;color:#fff;font-family:"Cormorant Garamond",serif;font-size:2rem;letter-spacing:.08em}
+.story-split{display:grid;grid-template-columns:320px 1fr;gap:56px;align-items:center}
+.story-photo{border-radius:22px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 60px -36px rgba(27,42,85,.55)}
+.story-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.cosmic-band{position:relative;background:#14204A url(images/hero.jpg) center/cover no-repeat}
+.cosmic-band::before{content:"";position:absolute;inset:0;background:rgba(20,32,74,.78)}
+.cosmic-band .wrap{position:relative}
+@media (max-width:880px){
+  .card-img{margin:0 -28px 18px}
+  .offer-banner{margin:-30px -22px 24px;height:150px}
+  .offer-banner span{left:22px;bottom:18px;font-size:1.5rem}
+  .story-split{grid-template-columns:1fr;gap:28px}
+  .story-photo{max-width:260px}
+}
+.layers-wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;margin:8px 0 48px}
+.layers-fig{margin:0;background:linear-gradient(160deg,#fff,var(--sky));border:1px solid var(--line);border-radius:22px;padding:28px 24px 16px}
+.layers{width:100%;height:auto;display:block}
+.layers-text h3{font-size:1.35rem;margin-bottom:14px}
+.layers-text p{color:var(--ink-soft)}
+.layers-note{margin-top:18px;display:flex;align-items:center;gap:12px;color:var(--deep)!important;font-weight:600}
+.layers-note span{flex:0 0 34px;height:14px;border:2px solid var(--gold);border-radius:3px;background:linear-gradient(90deg,#F6EEDA,#E4D2A8)}
+@media (max-width:880px){.layers-wrap{grid-template-columns:1fr;gap:24px}.layers-fig{padding:18px 12px 10px}}
+.benefits-title{font-size:1.15rem;margin:8px 0 0;color:var(--gold-soft)!important;letter-spacing:.06em}
+.benefit .ico,.card .ico{display:flex}

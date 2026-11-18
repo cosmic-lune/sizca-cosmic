@@ -195,6 +195,31 @@
       .tuning h3{margin:0 0 10px;font-weight:700;font-size:1.06rem;letter-spacing:.08em;color:var(--gold-pale)}
       .tuning p{margin:0;font-size:.97rem;font-weight:500;line-height:1.95;color:var(--ivory-dim)}
 
+      /* ---------- 95 / 5 ratio ---------- */
+      .ratio{max-width:760px;margin:64px auto 0;text-align:center}
+      .ratio-nums{display:flex;justify-content:center;align-items:flex-end;gap:clamp(32px,7vw,72px);margin-bottom:20px}
+      .ratio-nums .num{font-family:var(--latin);font-weight:600;line-height:1;letter-spacing:.02em}
+      .ratio-nums .num small{font-size:.42em;letter-spacing:.04em}
+      .ratio-nums .cap{display:block;font-family:var(--serif);font-size:.9rem;font-weight:700;letter-spacing:.16em;margin-top:10px}
+      .r-big .num{font-size:clamp(4.2rem,13vw,6.4rem);color:var(--gold-pale)}
+      .r-big .cap{color:var(--gold-pale)}
+      .r-small .num{font-size:clamp(1.9rem,5.5vw,2.7rem);color:#aebfe0}
+      .r-small .cap{color:#c9d3ea}
+      .ratio-bar{display:flex;height:16px;border-radius:999px;overflow:hidden;border:1px solid rgba(255,255,255,.35)}
+      .ratio-bar .seg95{flex:0 0 95%;background:linear-gradient(90deg,var(--gold-soft),var(--gold))}
+      .ratio-bar .seg5{flex:1;background:#8fb0e8}
+      .ratio-lead{font-size:1.08rem;font-weight:600;line-height:2.15;color:var(--ivory);margin:30px 0 0}
+      .ratio-punch{
+        font-size:clamp(1.18rem,3.4vw,1.42rem);font-weight:700;letter-spacing:.06em;line-height:1.9;
+        color:var(--gold-pale);margin:16px 0 0;
+      }
+      .tesla{
+        max-width:640px;margin:44px auto 0;padding-top:26px;
+        border-top:1px solid rgba(255,255,255,.28);
+        font-size:.96rem;font-weight:500;line-height:2;color:var(--ivory-dim);
+      }
+      .tesla .who{display:block;margin-top:8px;font-size:.85rem;letter-spacing:.14em;color:var(--gold-soft)}
+
       /* ---------- stats ---------- */
       .stats{
         display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
@@ -411,16 +436,20 @@
           </figure>
           <div>
             <p class="body">
-              ヒーリーは、手のひらにのる小さなデバイスと、スマートフォンのアプリで使う「周波数」の道具です。
-              アプリでプログラムを選ぶと、選んだ周波数がデバイスから流れます。
+              手のひらに、すっぽり収まる小さな白いデバイス。それがヒーリーです。
+              スマートフォンのアプリとつないで使う、「周波数」のセルフケア——難しい機械ではありません。
+              あなたの暮らしのそばに置く、もうひとつの「整える習慣」です。
             </p>
             <p class="body">
-              流し方は、電極を体につける方法や、身につけて使う方法など、プログラムに合わせていくつか。
-              難しい操作はなく、「選んで、流す」——それが基本の使い方です。
+              使い方は、驚くほどシンプル。アプリでその日の気分に合ったプログラムを選ぶと、選んだ周波数がデバイスから静かに流れます。
+              流し方は、電極を体につける方法もあれば、本体を身につけるだけの方法も、プログラムに合わせていくつか。
+              覚えることは何もなくて、「選んで、流す」——それだけです。
             </p>
             <p class="body">
-              お風呂上がりのひととき、仕事の合間、眠る前。
-              暮らしのすき間に、自分のための「整える時間」をつくるための道具、とイメージしてみてください。
+              お風呂上がり、温かいお茶を飲みながら。仕事の合間、椅子に深く腰かけて、ひと息。
+              眠る前、ベッドの中で、今日の自分をそっとねぎらうように。
+              暮らしのすき間に差し込む、自分だけの「整える時間」——それは、がんばるための時間ではなく、ゆるんで、本来の自分に戻るための時間です。
+              ヒーリーは、そのひとときを暮らしの中につくるための道具です。
             </p>
           </div>
         </div>
@@ -477,6 +506,28 @@
             <p>ヒーリーの考え方は、その「ずれ」を周波数の側から見つめ直すこと。その日の自分に合った周波数を流す時間を、調律のように暮らしに取り入れる——それがメーカーの提案するセルフケアです。</p>
           </div>
         </div>
+
+        <div class="ratio reveal">
+          <div class="ratio-nums">
+            <div class="r-big"><span class="num">95<small>%</small></span><span class="cap">見えない世界</span></div>
+            <div class="r-small"><span class="num">5<small>%</small></span><span class="cap">見える世界</span></div>
+          </div>
+          <div class="ratio-bar" aria-hidden="true"><div class="seg95"></div><div class="seg5"></div></div>
+          <p class="ratio-lead">
+            私たちが目で見て、触れて、確かめられる世界は、ほんの5％。<br />
+            残りの95％は、目に見えない世界だと言われています。
+          </p>
+          <p class="ratio-punch">だったら、どちらを整えたらいいかは——一目瞭然です。</p>
+        </div>
+
+        <p class="body reveal" style="color:var(--ivory-dim);margin-top:44px">
+          私たちの体も、心も、毎日の暮らしも、その土台にあるのは目に見えないエネルギーと振動です。情報フィールド、エネルギー・周波数、原子、分子、細胞、そして体へ——見えない世界が幾重にも重なって、やがて目に見える「現実」になっていく。ヒーリーがアプローチするのは、その一番の根本である「周波数」。表面的な対処ではなく、すべての現実の根っこの側から整えていく——それが、このデバイスの考え方です。
+        </p>
+
+        <p class="tesla reveal">
+          「宇宙の秘密を見つけたければ、エネルギー、周波数、そして振動の観点から考えなさい」
+          <span class="who">― ニコラ・テスラ</span>
+        </p>
       </div>
     </section>
 
