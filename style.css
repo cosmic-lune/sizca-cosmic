@@ -339,3 +339,11 @@ footer a{text-decoration:none;color:rgba(255,255,255,.85)}
 @media (max-width:880px){.layers-wrap{grid-template-columns:1fr;gap:24px}.layers-fig{padding:18px 12px 10px}}
 .benefits-title{font-size:1.15rem;margin:8px 0 0;color:var(--gold-soft)!important;letter-spacing:.06em}
 .benefit .ico,.card .ico{display:flex}
+.story-photo img{object-position:50% 30%}
+.campaign{display:inline-block;font-size:.75rem;letter-spacing:.08em;color:#fff;background:var(--gold);padding:2px 10px;border-radius:999px;line-height:1.6;vertical-align:middle}
+.was{color:var(--ink-soft);font-size:.85rem;text-decoration-thickness:1px}
+.price-line .was{margin-left:auto}
+.price-line .was + b{margin-left:10px}
+.card .meta b{font-weight:600;color:var(--deep);font-size:1.05rem}
+.was{white-space:nowrap}
+@media (max-width:520px){.price-line .was + b{margin-left:auto}}
